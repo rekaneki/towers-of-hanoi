@@ -1,11 +1,12 @@
 #pragma once
 #include <string>
+#include "Rectangle.h"
 
 using std::string;
 
 namespace uni
 {
-	class Cube
+	class Cube : public Rectangle
 	{
 	public:
 		Cube();
@@ -15,15 +16,13 @@ namespace uni
 
 		Cube &operator=(const Cube &obj);
 
-		void setLength(double length);
-		void setColor(string length);
 		double getVolume() const;
 		double getSurfaceArea() const;
-		double getLength() const;
+
+		void setColor(string length);
 		string getColor() const;
 
 	private:
-		double _length;
 		string _color;
 	};
 }
